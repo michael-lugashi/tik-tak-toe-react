@@ -1,10 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/index.css';
+import Board from './core/board';
 
-ReactDOM.render(
-  <React.StrictMode>
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+class Game extends React.Component {
+ render() {
+  return (
+   <div className="game">
+    <div className="game-board">
+     <Board />
+    </div>
+    <div className="game-info">
+     <div>{/* status */}</div>
+     <ol>{/* TODO */}</ol>
+    </div>
+   </div>
+  );
+ }
+}
 
+// ========================================
+
+ReactDOM.render(<Game />, document.getElementById('root'));
